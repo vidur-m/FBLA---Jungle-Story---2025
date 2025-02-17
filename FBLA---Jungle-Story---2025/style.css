@@ -28,7 +28,7 @@ body {
 
 #story-container:hover {
     cursor: pointer;
-    background-color: lightgreen;
+    background-color: rgba(144, 238, 144, 0.651);
 }
 
 #pressEnter {
@@ -99,7 +99,7 @@ button {
 }
 
 button:hover {
-    background-color: lightgreen;
+    background-color: rgba(144, 238, 144, 0.651);
     font-size: 25px;
     cursor: pointer;
 }
