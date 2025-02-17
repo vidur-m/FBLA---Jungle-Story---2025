@@ -274,6 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function backgroundImage(sceneIndex) {
         const body = document.body;
+        
         //Every time that the sceneIndex changes, the background image changes and fades in and out.
         //This happens every 5 milliseconds to ensure a speedy background transition.
         //The transition only occurs because the opacity is being increased and decreased at steady rates.
