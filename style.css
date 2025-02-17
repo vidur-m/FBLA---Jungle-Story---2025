@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(10, 100, 50); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+}
+
+#story-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 10vh;
+    padding: 20px;
+    font-size: 38px;
+    font-family: Papyrus, fantasy;
+    font-weight: bold;
+    color: rgb(6, 67, 6);
+    text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,  
+    -1px  1px 0 #000,  
+     1px  1px 0 #000;
+    background-color: rgba(15, 126, 13, 0.448);
+    box-shadow: 0 2px 4px rgba(174, 143, 143, 0.1);
+    text-align: center;
+}
+
+#story-container:hover {
+    cursor: pointer;
+    background-color: lightgreen;
+}
+
+#pressEnter {
+    font-size: 25px;
+}
+
+#beginButton {
+    font-size: 50px;
+    height: 200px;
+    width: 300px;
+}
+
+#beginButton:hover {
+    cursor: pointer;
+}
+
+#infoButton {
+    font-size: 50px;
+    height: 200px;
+    width: 300px;
+}
+
+#infoButton:hover {
+    cursor: pointer;
+}
+
+#beginButton2 {
+    font-size: 32px;
+    height: 115px;
+    width: 145px;
+}
+
+#beginButton2:hover {
+    cursor: pointer;
+}
+
+#backInfo {
+    font-size: 32px;
+    height: 115px;
+    width: 145px;
+}
+
+#backInfo:hover {
+    cursor: pointer;
+}
+
+button {
+    width: 250px;
+    height: 150px;
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    border-radius: 7px;
+    font-size: 23px;
+    font-family: Papyrus, fantasy;
+    font-weight: bold;
+     background-color: rgba(15, 126, 13, 0.486);
+     color: rgb(6, 67, 6);
+     text-shadow: 
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,  
+     -1px  1px 0 #000,  
+      1px  1px 0 #000;
+    line-height: 4;
+    gap: 5px;
+}
+
+button:hover {
+    background-color: lightgreen;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#choices-container {
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.container {
+    display: flex;               
+    flex-direction: column;      
+    align-items: center;         
+    gap: 15px;                   
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Papyrus, fantasy;
+    font-weight: bold;
+}
+
+label {
+    margin-top: 17px;
+    color: white;
+}
+
+#creators {
+    font-size: 30px;
+}
+
+* {
+    transition: 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.descriptions {
+    font-size: 20px;
+    color: white;
+    font-family: Papyrus, fantasy;
+    font-weight: bold;
+    text-align: center;
+}
+
+#textInput2 {
+    font-family: Papyrus, fantasy;
+    font-weight: bold;
+}
+
+#textInput {
+    font-family: Papyrus, fantasy;
+    font-weight: bold;
+}
