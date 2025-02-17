@@ -452,7 +452,9 @@ document.addEventListener('DOMContentLoaded', function() {
        }
     });
 
-    /* */ 
+    /*Uses an EventListener to check if the Enter key is pressed, and if those
+    inputs are not equal to nothing, it will call a corresponding function, 
+    whether that be displayInput, or displayInput2.*/ 
 
     document.addEventListener('keydown', function(event) {
         var userInput = document.getElementById('textInput').value.trim().toUpperCase();
