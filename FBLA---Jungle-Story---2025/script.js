@@ -421,10 +421,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    /*Sets a variable called userInput2 equal to user input recieved from an input box all capitalized.*/
-    /*Then if the value stored in userInput2 is numeric, and between the values of 2 and 15, the storypartIndex is set
-    to whatever the user input, an alert is shown on the user's screen to the indicate the change,
-    and the renderScene function is called to create the new scene.*/ 
+    /*Sets a variable called storyPartIndex equal to user input recieved from the dropdownInputBox.*/
+    /*Then, the values are saved to the local storage under the key 'storyPartIndex', an alert is shown
+    on the user's screen to the indicate the change, and the renderScene function is called to create 
+    the new scene.*/ 
 
     function displaydropdownInput() {
         storyPartIndex = dropdownInputBox.value;
