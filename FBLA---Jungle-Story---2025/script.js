@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const beginButton2 = document.getElementById('beginButton2');
     heading = document.querySelector('.container h1');
     label = document.querySelector('label[for="textInput"]');
-    label2 = document.querySelector('label[for="textInput2"]');
+    label2 = document.querySelector('label[for="dropdownInput"]');
     creators = document.querySelector('label[for="beginButton2"]');
     pressSpace = document.querySelector('label[for="beginButton"]');
     const infoButton = document.getElementById('infoButton');
@@ -451,12 +451,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('keydown', function(event) {
         var userInput = document.getElementById('textInput').value.trim().toUpperCase();
-        var userInput2 = document.getElementById('textInput2').value.trim();
-        if (event.key == 'Enter' && userInput != "") {
+        var userInput2 = dropdownInputBox.value;
+        if (event.key == 'Enter' && userInput != "" || event.key == 'Enter' && userInput2) {
              displayInput();
-        }
-        else if ((event.key == 'Enter' && userInput2 != "")) {
-            displaydropdownInput();
+             displaydropdownInput();
         }
      });
 
