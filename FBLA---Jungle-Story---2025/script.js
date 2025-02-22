@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const storyContainer = document.getElementById('story-container');
     const choiceContainer = document.getElementById('choices-container');
     const textInputBox = document.getElementById('textInput');
-    const textInputBox2 = document.getElementById('textInput2');
+    const dropdownInputBox = document.getElementById('dropdownInput');
     const beginButton = document.getElementById('beginButton');
     const beginButton2 = document.getElementById('beginButton2');
     heading = document.querySelector('.container h1');
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             //scene 4://
-            text: 'You wander through the forest, and hear thundering stomps coming from your left...' + 
+            text: 'You wander through the forest, but hear thundering stomps coming from your left...' + 
             '\n' + 
             'Do you invesigate or keep running?',
             choices: [
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (storyPartIndex === 0) {
             textInputBox.style.display = 'none';
-            textInputBox2.style.display = 'none';
+            dropdownInputBox.style.display ='none';
             heading.style.display = 'none';
             label.style.display = 'none';
             label2.style.display = 'none';
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         } else if (storyPartIndex === 1) {
             textInputBox.style.display = 'none';
-            textInputBox2.style.display = 'none';
+            dropdownInputBox.style.display ='none';
             heading.style.display = 'none';
             label.style.display = 'none';
             label2.style.display = 'none';
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         } else {
             textInputBox.style.display = 'block'; 
-            textInputBox2.style.display = 'block';
+            dropdownInputBox.style.display ='block';
             heading.style.display = 'block';
             label.style.display = 'block';
             label2.style.display = 'block';
@@ -274,7 +274,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function backgroundImage(sceneIndex) {
         const body = document.body;
-        
         //Every time that the sceneIndex changes, the background image changes and fades in and out.
         //This happens every 5 milliseconds to ensure a speedy background transition.
         //The transition only occurs because the opacity is being increased and decreased at steady rates.
@@ -427,18 +426,11 @@ document.addEventListener('DOMContentLoaded', function() {
     to whatever the user input, an alert is shown on the user's screen to the indicate the change,
     and the renderScene function is called to create the new scene.*/ 
 
-    function displayInput2() {
-        var userInput2 = document.getElementById('textInput2').value.trim();
-        if (!isNaN(userInput2) == true && userInput2 <= 15 && userInput2 > 1) {
-            storyPartIndex = parseInt(userInput2);
-            localStorage.setItem('storyPartIndex', storyPartIndex);
-            alert("Changing scenes")
-            textInputBox2.value='';
-            renderScene();
-        } else if (userInput2 != "") {
-            alert("Please enter a numeric value to reach any scene between 2 & 15.")
-            textInputBox2.value = '';
-        }
+    function displaydropdownInput() {
+        storyPartIndex = dropdownInputBox.value;
+        localStorage.setItem('storyPartIndex', storyPartIndex);
+        alert("Changing scenes")
+        renderScene();
     }
 
     /*Uses an EventListener to check if the Space key is pressed, and if storyPartIndex is 
@@ -464,7 +456,7 @@ document.addEventListener('DOMContentLoaded', function() {
              displayInput();
         }
         else if ((event.key == 'Enter' && userInput2 != "")) {
-            displayInput2();
+            displaydropdownInput();
         }
      });
 
