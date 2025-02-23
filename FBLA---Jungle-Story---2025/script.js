@@ -427,9 +427,12 @@ document.addEventListener('DOMContentLoaded', function() {
     the new scene.*/ 
 
     function displaydropdownInput() {
-        storyPartIndex = dropdownInputBox.value;
-        localStorage.setItem('storyPartIndex', storyPartIndex);
-        alert("Changing scenes")
+        if (dropdownInputBox.value != "") {
+            storyPartIndex = dropdownInputBox.value;
+            localStorage.setItem('storyPartIndex', storyPartIndex);
+            alert("Changing scenes")
+            dropdownInputBox.selectedIndex = "";
+        }
         renderScene();
     }
 
